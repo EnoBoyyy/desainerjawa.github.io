@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Ongkir - Desainer Jawa</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container header-container">
+          <div class="logo">
+            <h1>Desainer Jawa</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="custom.html">Buat Custom</a></li>
+              <li><a href="products.html">Produk</a></li>
+              <li><a href="cek-ongkir.html">Cek Ongkir</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="main-container">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d389.78415604146494!2d112.70446965900919!3d-7.326084779651622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc99cf382721%3A0x18429b3b95188635!2sJl.%20Bogangin%20Baru%20Blk.%20G%20No.22%2C%20Kedurus%2C%20Kec.%20Karangpilang%2C%20Surabaya%2C%20Jawa%20Timur%2060222!5e0!3m2!1sid!2sid!4v1724860907593!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="form-container">
+          <h2>Cek Ongkir</h2>
+          <p>
+            Isi formulir di bawah ini untuk menghitung ongkir berdasarkan lokasi
+            Anda.
+          </p>
+          <form id="shipping-form">
+            <label for="province">Provinsi:</label>
+            <select id="province" onchange="updateCities()">
+              <option value="">Pilih Provinsi</option>
+              <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <label for="city">Kota:</label>
+            <select id="city" onchange="updateDistricts()">
+              <option value="">Pilih Kota</option>
+              <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <label for="district">Kecamatan:</label>
+            <select id="district">
+              <option value="">Pilih Kecamatan</option>
+              <!-- Options will be filled by JavaScript -->
+            </select>
+
+            <button type="button" onclick="calculateShipping()">
+              Cek Ongkir
+            </button>
+          </form>
+          <section class="result-container" id="result">
+            <!-- Total ongkir akan muncul di sini -->
+          </section>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <p>&copy; 2024 Desainer Jawa. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

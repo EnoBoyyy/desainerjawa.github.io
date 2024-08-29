@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buat Desain Jersey Custom - Desainer Jawa</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <h1>Desainer Jawa</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="custom.html">Buat Custom</a></li>
+            <li><a href="products.html">Produk</a></li>
+            <li><a href="cek-ongkir.html">Cek Ongkir</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="custom">
+      <div class="container">
+        <h2>Buat Desain Jersey Custom Anda</h2>
+        <p>
+          Gunakan formulir di bawah ini untuk mengkustomisasi jersey sport
+          sesuai keinginan Anda.
+        </p>
+
+        <form class="custom-form">
+          <!-- Warna -->
+          <div class="color-selection">
+            <label for="color">Pilih Warna:</label>
+            <div class="color-palette">
+              <input type="radio" id="color1" name="color" value="#ff6347" />
+              <label for="color1" style="background-color: #ff6347"></label>
+
+              <input type="radio" id="color2" name="color" value="#4682b4" />
+              <label for="color2" style="background-color: #4682b4"></label>
+
+              <input type="radio" id="color3" name="color" value="#32cd32" />
+              <label for="color3" style="background-color: #32cd32"></label>
+
+              <input type="radio" id="color4" name="color" value="#ffeb3b" />
+              <label for="color4" style="background-color: #ffeb3b"></label>
+
+              <input type="radio" id="color5" name="color" value="#8a2be2" />
+              <label for="color5" style="background-color: #8a2be2"></label>
+            </div>
+          </div>
+
+          <!-- Ukuran dan Jumlah -->
+          <div class="size-selection">
+            <label for="sizes">Pilih Ukuran dan Jumlah:</label>
+            <div class="size-group">
+              <label for="size-m">M:</label>
+              <input
+                type="number"
+                id="size-m"
+                name="size-m"
+                min="0"
+                placeholder="Jumlah M"
+              />
+            </div>
+            <div class="size-group">
+              <label for="size-l">L:</label>
+              <input
+                type="number"
+                id="size-l"
+                name="size-l"
+                min="0"
+                placeholder="Jumlah L"
+              />
+            </div>
+            <div class="size-group">
+              <label for="size-xl">XL:</label>
+              <input
+                type="number"
+                id="size-xl"
+                name="size-xl"
+                min="0"
+                placeholder="Jumlah XL"
+              />
+            </div>
+            <div class="size-group">
+              <label for="size-xxl">XXL:</label>
+              <input
+                type="number"
+                id="size-xxl"
+                name="size-xxl"
+                min="0"
+                placeholder="Jumlah XXL"
+              />
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="total-section">
+            <label for="total">Total Jumlah Jersey:</label>
+            <input type="text" id="total" name="total" readonly />
+          </div>
+
+          <!-- Desain -->
+          <div class="design-section">
+            <label for="design">Unggah Desain Anda:</label>
+            <input type="file" id="design" name="design" />
+          </div>
+
+          <!-- Formulir -->
+          <button type="submit" class="submit-button">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Desainer Jawa. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"
+            ><img src="img/facebook-icon.png" alt="Facebook"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="img/twitter-icon.png" alt="Twitter"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="img/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Script untuk menghitung total jumlah jersey
+      document.querySelectorAll(".size-group input").forEach((input) => {
+        input.addEventListener("input", updateTotal);
+      });
+
+      function updateTotal() {
+        let total = 0;
+        document.querySelectorAll(".size-group input").forEach((input) => {
+          total += parseInt(input.value) || 0;
+        });
+        document.getElementById("total").value = total;
+      }
+    </script>
+  </body>
+</html>

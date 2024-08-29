@@ -1,0 +1,698 @@
+/* Reset margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+button,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header section */
+header {
+  background: linear-gradient(90deg, #a8e063 0%, #56ab2f 100%);
+  color: white;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Search and category section */
+.search-container {
+  background-color: #f8f8f8;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #3e8e41;
+}
+
+.category-options {
+  display: flex;
+  gap: 10px;
+}
+
+.category {
+  padding: 10px 20px;
+  background-color: #56ab2f;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.category:hover {
+  background-color: #3e8e41;
+}
+
+/* Hero section */
+.hero-text h2 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 5px; /* Mengurangi jarak bawah */
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #000000; /* Warna emas atau sesuai dengan tema yang diinginkan */
+  margin-bottom: 0px; /* Mengurangi jarak bawah */
+}
+
+.hero-text p {
+  font-size: 1.5em;
+  color: #f8f9fa;
+  margin-top: 5px; /* Mengurangi jarak atas */
+}
+
+.hero {
+  background: linear-gradient(
+    90deg,
+    #a8e063 0%,
+    #56ab2f 100%
+  ); /* Warna latar belakang bisa disesuaikan */
+  padding: 50px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
+/* Gaya untuk gambar di hero section */
+.hero-image {
+  flex-shrink: 0;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Services section */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.services h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 5px solid #388e3c;
+}
+
+/* Gaya untuk bagian keterangan jersey */
+.jersey-info {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.jersey-info h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.jersey-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-item h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Gaya untuk halaman custom */
+.custom {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.custom h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.custom p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Gaya untuk formulir kustom */
+.custom-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk pemilihan warna */
+.color-selection {
+  margin-bottom: 30px;
+}
+
+.color-selection label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.color-palette {
+  display: flex;
+  gap: 10px;
+}
+
+.color-palette input[type="radio"] {
+  display: none;
+}
+
+.color-palette label {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: border 0.3s ease;
+}
+
+.color-palette label:hover {
+  border-color: #56ab2f;
+}
+
+.color-palette input[type="radio"]:checked + label {
+  border-color: #56ab2f;
+  box-shadow: 0 0 5px #56ab2f;
+}
+
+/* Gaya untuk bagian unggah desain */
+.design-section {
+  margin-bottom: 30px;
+}
+
+.design-section label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.design-section input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Gaya untuk tombol kirim */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Gaya untuk ukuran dan jumlah */
+.size-selection {
+  margin-bottom: 30px;
+}
+
+.size-selection label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.size-group {
+  margin-bottom: 10px;
+}
+
+.size-group label {
+  display: inline-block;
+  width: 60px;
+  font-size: 16px;
+}
+
+.size-group input {
+  width: 80px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Gaya untuk total jumlah */
+.total-section {
+  margin-bottom: 30px;
+}
+
+.total-section label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.total-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+}
+
+/* Gaya untuk halaman produk */
+.products {
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.products h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-item .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #56ab2f;
+}
+
+/* Gaya untuk form dan hasil ongkir */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.map-container {
+  flex: 1;
+  max-width: 60%;
+  margin-right: 20px;
+  height: 400px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.form-container {
+  flex: 1;
+  max-width: 40%;
+}
+
+.result-container {
+  margin-top: 20px;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #3e8e41;
+}
+
+.result-container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Contact section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whatsapp-logo {
+  width: 70%;
+  height: auto;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.chat-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #25d366;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.chat-button:hover {
+  background-color: #128c7e;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 80%;
+    margin-top: 20px;
+  }
+
+  .map-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .category-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    margin-bottom: 10px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .map-container {
+    max-width: 100%;
+    margin-right: 0;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .services h3,
+  .custom h2,
+  .products h2,
+  .contact h2 {
+    font-size: 24px;
+  }
+
+  .services p,
+  .custom p,
+  .product-item p,
+  .info-item p {
+    font-size: 14px;
+  }
+
+  .submit-button,
+  .chat-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .size-group input,
+  .total-section input {
+    font-size: 14px;
+  }
+}
